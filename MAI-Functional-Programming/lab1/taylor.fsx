@@ -1,5 +1,5 @@
 // Print a table of a given function f, computed by taylor series
-
+//16 вариант
 // function to compute
 let f x = (1. + 2. * x * x) * (exp(x * x))
 
