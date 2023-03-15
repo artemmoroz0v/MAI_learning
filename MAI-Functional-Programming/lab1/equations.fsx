@@ -33,8 +33,7 @@ let f3' (x: float) = ((3. * System.Math.Pow(x, 2.0/3.0) + 2. * sqrt(x)) / (6. * 
 
 let phi1 (x: float) = (3.8 - 3. * sin(sqrt(x))) / 0.35
 let phi2 (x: float) = 1.2502 - 0.25 * x * x * x
-let phi3 (x: float) = x - (x + sqrt(x) + System.Math.Cbrt(x) - 2.5) / (((3. * System.Math.Pow(x, 2.0/3.0) + 2. * sqrt(x)) / (6. * System.Math.Pow(x, 7.0/6.0))) + 1.)
-
+let phi3 (x: float) = (2.5 / (1. + (sqrt(x)) + x ** (-1. / 6.))) ** 2.
 let main = 
     printfn "%10.4f  %10.4f  %10.4f" (dichotomy f1 2. 3. epsilon) (iterations phi1 2. epsilon) (newthon f1 f1' 2. epsilon)
     printfn "%10.4f  %10.4f  %10.4f" (dichotomy f2 0. 2. epsilon) (iterations phi2 0. epsilon) (newthon f2 f2' 0. epsilon)
