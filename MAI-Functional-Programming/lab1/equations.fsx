@@ -1,4 +1,5 @@
 // Define functions to solve algebraic equations
+// Варианты функций 16-18
 let epsilon: float = 0.000001
 
 let rec dichotomy f (a: float) (b: float) (epsilon: float) = 
